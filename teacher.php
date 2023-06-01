@@ -15,7 +15,7 @@
       <img src="RM.png" alt="RM" width="60" height="60">
       <h2 class = "student justify-content">StudentApp</h2>
     </a>
-
+</nav>
        <div class = "container">
         <?php
                 if(isset($_GET['msg'])){
