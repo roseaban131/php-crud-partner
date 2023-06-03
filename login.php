@@ -75,39 +75,57 @@
     .form-group input[type="submit"]:hover {
       background-color: #45a049;
     }
+    .custom-background {
+  background-image: url('minimalist.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+ 
+}
+
   </style>
-  <body>
+  <body class = "custom-background">
   <br/>
-  <div class ="p-3 mb-5 bg-primary-subtle text-emphasis-primary"id = "form-floating mb-3" style="width:30%; padding: 50px; margin: auto; text-align: left;">
+  
+  <div class ="card shadow" id = "form-floating mb-1" style="width:30%; padding: 50px; margin: auto; text-align: left;">
     <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" class="form-signin">
 
       
       
-      <img src="RM.png" alt="RM" width="100" height="100">
-      <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+      <img class = "mx-auto justify-center" src="RM.png" alt="RM" width="100" height="100">
+      <h1 class="h2 mb-3 font-weight-normal">Sign in</h1>
       
       <label for="inputEmail" class="sr-only">Username</label>
-      <div class = "input-group-text">
-      <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+      <div class = "input-group">
+      <span class="input-group-text" id="basic-addon1"></span>
       <input type="text" id="username" name="username" class="form-control" placeholder="Username"   required="" autofocus="">
   
       
     </div>
       <br/><label for="inputPassword" class="sr-only">Password</label>
-      <div class = "input-group-text">
+      <div class = "input-group">
       <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
-      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+      <input type="password" id="password" name="password" class="form-control" placeholder="********" pattern=".{8,}" required>
   </div>
+  <br>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
       
-      <button type="submit" name="submit" value="Submit" class="btn btn-lg btn-success ">Sign in</button>
-      <a href name = "cancel" value = "cancel" class="btn btn-lg btn-danger">Cancel</a>
+      <button type="submit" name="submit" value="Submit" class="btn btn-success ">Sign in</button>
+      <a href name = "cancel" value = "cancel" class="btn btn-danger">Cancel</a>
+      <br> <br>
+      <label>
+         Don't have an account?
+        </label>
+      <a href="register.php" class = "btn btn-outline-primary">Register</a>
     </form>
+    
+  </div> 
   </div>
+
   
   </body>
   </html>

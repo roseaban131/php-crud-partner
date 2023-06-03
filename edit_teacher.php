@@ -4,6 +4,11 @@ include "config/config.php";
 
 $id = $_GET['id'];
 
+$sql = "SELECT * FROM `teachers` WHERE id_teacher = '$id'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+
 if (isset($_POST['submit'])) {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
@@ -40,9 +45,12 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <nav class="navbar navbar-light justify-content-left fs-3 mb-5" style="background-color: lightblue;">
-        WEB APPLICATION
-    </nav>
+<nav class ="navbar navbar-light justify-content-left fs-3 mb-5" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+      <img src="RM.png" alt="RM" width="60" height="60">
+      <h2 class = "student justify-content">StudentApp</h2>
+    </a>
+</nav>
     <div class="container">
         <div class="text-left mb-4">
             <h3>Add</h3>

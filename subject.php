@@ -9,11 +9,12 @@
         <title>PHP PARTNER</title>
     </head> 
 
-    <body>
+    <body class = "custom-background">
     <nav class ="navbar navbar-light justify-content-left fs-3 mb-5" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="#">
-      <img src="RM.png" alt="RM" width="60" height="60">
-      <h2 class = "student justify-content">StudentApp</h2>
+            <h2>
+      <img src="RM.png" alt="RM" width="60" height="60">StudentApp
+    </h2>
     </a> </nav>
        <div class = "container">
         <?php
@@ -26,10 +27,25 @@
                 }        
         ?>
         <h2>Subject</h2>
-       
-        <a href="add_subject.php" class = "btn btn-success float-end">Add Subject</a>
-        
-        <a href="student.php" class = "btn btn-outline-primary float-start">View Student </a>
+        <a href="add_subject.php" class = "btn btn-outline-success float-end">Add subject</a>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="student.php" class="btn btn float-start nav-link ">View Student</a>
+            </li>
+            <li class="nav-item">
+                <a href="teacher.php" class="btn btn float-start nav-link ">View Teachers</a>
+            </li>
+            <li class="nav-item">
+                <a href="subject.php" class="btn btn float-start nav-link active">View Subject</a>
+            </li>
+            <li class="nav-item">
+                <a href="grades.php" class="btn btn float-start nav-link">View Grades</a>
+            </li>
+            <li class="nav-item">
+                <a href="classes.php" class="btn btn float-start nav-link">View Class</a>
+            </li>
+        </ul>
 
         <table class="table table-hover table-striped columns text-left">
         
@@ -37,7 +53,6 @@
             <tr>
             <th scope="col">ID</th>
             <th scope="col">Subject Name</th>
-            
             <th scope="col">Action</th>
             </tr>
         </thead>
@@ -65,12 +80,11 @@
                     <?php
                 }
             ?>
-           <br><br>
            
 
         </tbody>
         </table>
-        
+        <div>
 
        </div>
          <!-- Bootstrap -->

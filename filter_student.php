@@ -12,19 +12,21 @@
     <body>
     <nav class ="navbar navbar-light justify-content-left fs-3 mb-5" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="#">
-      <img src="RM.png" alt="RM" width="60" height="60">
-      <h2 class = "student justify-content">StudentApp</h2>
+            <h2>
+      <img src="RM.png" alt="RM" width="60" height="60">StudentApp
+    </h2>
     </a>
+ 
 
             <form class ="d-flex" role="search" action="filter_student.php" method="GET">
                     <br>
                     
-                    <select class="form-select form-select-lg" aria-label=".form-select-lg example" id="search" name="gender">
-                        <option value="Male">Select</option>
+                    <select class="form-select form-select-lg me-2" aria-label=".form-select-lg example" id="search" name="gender">
+                        <option value="Select">Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
                 </form>
             
         </nav>
@@ -40,8 +42,24 @@
         ?>
         <h2>Student Information</h2>
        
-        <a href="add_student.php" class = "btn btn-success float-end">Add</a>
-        <a href="student.php" class = "btn btn-outline-primary float-start">View Student Table</a>
+        <a href="add_student.php" class = "btn btn-outline-success float-end">Add student</a>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="student.php" class="btn btn float-start nav-link active">View Student</a>
+            </li>
+            <li class="nav-item">
+                <a href="teacher.php" class="btn btn float-start nav-link">View Teachers</a>
+            </li>
+            <li class="nav-item">
+                <a href="subject.php" class="btn btn float-start nav-link ">View Subject</a>
+            </li>
+            <li class="nav-item">
+                <a href="grades.php" class="btn btn float-start nav-link">View Grades</a>
+            </li>
+            <li class="nav-item">
+                <a href="classes.php" class="btn btn float-start nav-link">View Class</a>
+            </li>
+        </ul>
 
         <table class="table table-hover table-striped columns text-left">
         
@@ -87,7 +105,7 @@
                     <?php
                 }
             ?>
-           <br><br>
+         
            
 
         </tbody>

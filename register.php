@@ -39,18 +39,24 @@ include "config/db.php";
     <title>Register</title>
   </head>
   <style>
-
+.custom-background {
+  background-image: url('minimalist.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+ 
+}
   </style>
-  <body>
+  <body class = "custom-background">
     
   <br/>
-  <div class ="p-3 mb-2 bg-primary-subtle text-emphasis-primary" id = "form-floating mb-3" style="width:55%; margin: auto; text-align: justify;">
+  <div class ="card shadow" id = "form-floating mb-1" style="width:55%; padding: 50px; margin: auto; text-align: justify;">
   <form action="" method="post" style="width: 50vw; min-width: 300px;">
     <h2>Registration</h2>
     <div class="row mb-3">
         <div class="col">
             <label class="form-label">Username:</label>
-            <input type="text" class="form-control" name="username" placeholder="@name" required>
+            <input type="text" class="form-control" name="username" placeholder="Username" required>
         </div>
         <div class="col">
             <label class="form-label">Password:</label>
@@ -87,7 +93,7 @@ include "config/db.php";
         <input type="text" class="form-control" name="email" placeholder="name@example.com" required>
     </div>
     <div>
-        <a href="login.php" class="btn btn-secondary"> < </a>
+        <a href="login.php" class="btn btn-secondary"> Back </a>
         <button type="submit" class="btn btn-success" name="submit">Submit</button>
         <a href="#" class="btn btn-danger">Cancel</a>
     </div>

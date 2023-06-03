@@ -8,12 +8,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <title>PHP CRUD PARTNER</title>
     </head> 
-
-    <body>
+    
+    <body class = "custom-background">
         <nav class ="navbar navbar-light justify-content-left fs-3 mb-5" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="#">
-      <img src="RM.png" alt="RM" width="60" height="60">
-      <h2 class = "student justify-content">StudentApp</h2>
+            <h2>
+      <img src="RM.png" alt="RM" width="60" height="60">StudentApp
+    </h2>
     </a>
            
          
@@ -25,7 +26,7 @@
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
-                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary me-2" type="submit">Search</button>
                 </form>
             
         </nav>
@@ -39,18 +40,29 @@
                   </div>';
                 }        
         ?>
-        <h2>Student Information</h2>
+        <h2>Student</h2>
        
-        <a href="add_student.php" class = "btn btn-success float-end">Add Student</a>
-        <a href="teacher.php" class = "btn btn-outline-primary float-start">View Teachers </a>
-       
-        <a href="subject.php" class = "btn btn-outline-primary float-start">View Subject</a>
-       
-        <a href="grades.php" class = "btn btn-outline-primary float-start">View Grades</a>
-        
-        <a href="classes.php" class = "btn btn-outline-primary float-start">View Class</a>
-        
-        <table class="table table-hover table-striped">
+        <a href="add_student.php" class = "btn btn-outline-success float-end">Add Student</a>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="student.php" class="btn btn float-start nav-link active">View Student</a>
+            </li>
+            <li class="nav-item">
+                <a href="teacher.php" class="btn btn float-start nav-link">View Teachers</a>
+            </li>
+            <li class="nav-item">
+                <a href="subject.php" class="btn btn float-start nav-link ">View Subject</a>
+            </li>
+            <li class="nav-item">
+                <a href="grades.php" class="btn btn float-start nav-link">View Grades</a>
+            </li>
+            <li class="nav-item">
+                <a href="classes.php" class="btn btn float-start nav-link">View Class</a>
+            </li>
+        </ul>
+
+<div class = "table-container">
+        <table class="table table-hover table-striped columns text-left">
     <thead class="table-light">
         <tr>
             <th scope="col">ID</th>
@@ -89,6 +101,7 @@
 </table>
 
         <a href="login.php" class = "btn btn-outline-danger float-start">Logout</a>
+       </div>
        </div>
          <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

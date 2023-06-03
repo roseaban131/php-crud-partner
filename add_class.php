@@ -3,10 +3,10 @@ include "config/db.php";
 include "config/config.php";
 if (isset($_POST['submit'])){
     $class_name =$_POST['class_name'];
-    $grade_level =$_POST['grade_level'];
+    $schedule =$_POST['schedule'];
 
-    $sql = "INSERT INTO `classes`(`class_name`, `grade_level`) 
-    VALUES ('$class_name', '$grade_level')";
+    $sql = "INSERT INTO `classes`(`class_name`, `schedule`) 
+    VALUES ('$class_name', '$schedule')";
 
     $result = mysqli_query($conn, $sql);
 
@@ -33,9 +33,13 @@ if (isset($_POST['submit'])){
     </head> 
 
     <body>
-        <nav class ="navbar navbar-light justify-content-left fs-3 mb-5" style ="background-color: lightblue;">
-            WEB APPLICATION
-        </nav>
+    <nav class ="navbar navbar-light justify-content-left fs-3 mb-5" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <h2>
+      <img src="RM.png" alt="RM" width="60" height="60">StudentApp
+    </h2>
+    </a>
+ </nav>
         <div class = "container">
             <div class ="text-left mb-4"><h3>Add class</h3></div>
            
@@ -47,8 +51,8 @@ if (isset($_POST['submit'])){
                     </div>
 
                     <div class = "col">
-                        <label class = "form-label">Grade Level:</label>
-                        <input type ="text" class = "form-control" name="grade_level" placeholder = "Enter grade level">
+                        <label class = "form-label">Schedule:</label>
+                        <input type ="text" class = "form-control" name="schedule" placeholder = "Schedule">
                     </div>
                     <div>
                         
